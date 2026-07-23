@@ -1,0 +1,128 @@
+:root{
+    --primary:rgb(12, 12, 41);
+    --secondary:rgb(164, 92, 205);
+    --first-color:rgb(34, 50, 112);
+}
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+    box-sizing: border-box;
+}
+body{
+
+    background: var(--primary);
+    min-height: 100vh;
+    width: 100vw;
+    transition: all 0.8s;
+}
+
+.navBar{
+    background: rgb(255, 208, 208);
+    
+}
+.nav-link{
+    font-weight: 620;
+    color: var(--first-color);
+    border: 2px solid transparent;
+    margin: auto 0;
+}
+.nav-link:hover{
+    animation:borderAnimation 1.2s infinite ease-in-out ;
+}
+
+
+
+
+@keyframes borderAnimation{
+    0%,100%{
+        border: 2px solid transparent;
+        transform: translateY(0px);
+    }
+    50%{
+        border: 2px solid var(--first-color);
+        transform: translateY(3px);
+    }
+
+}
+
+.logo{
+    font-size: 25px;
+    border: none !important;
+    text-decoration: none;
+    font-weight: 620;
+    color: var(--first-color);
+    user-select: none;
+}
+
+.posts{
+    background: transparent;
+}
+.card-header img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.card-body .PostImage {
+    width: 90%;               /* 👈 يملأ عرض الحاوية الأب دائمًا */
+    max-width: 90%;           /* يمنع الفيضان (overflow) نهائيًا */
+    height: auto; 
+    max-height: fit-content;/* ارتفاع متجاوب منفصل */
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;  
+}
+.author,.user{
+    text-decoration: none;
+    transition: all 0.4s;
+    cursor: pointer; 
+}
+.author:hover,.user:hover{
+    text-decoration:underline;
+}
+.postTags .Tag{
+    background: rgb(75, 72, 72);
+    color: white;
+}
+.commentElement{
+    color: rgba(50, 52, 54, 0.695);
+    cursor: pointer;
+}
+.commentElement:hover{
+    color: rgb(50, 52, 54);
+    user-select: none;
+}
+
+.alert_div{
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 999999;
+}
+.hideEllement{
+    display: none !important;
+    
+}
+.btn{
+    height: 40px;
+}
+
+.addPost_btn{
+    position: fixed;
+    bottom: 70px;
+    right: 5%;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--first-color);
+    height: 40px;
+    width: 40px;
+    border: none;
+    box-shadow: 4px 4px 16px rgb(91, 133, 173);
+    color: white;
+}
+.addPost_btn:hover{
+    background-color: rgb(86, 120, 255);
+    transform: scale(1.09);
+}
